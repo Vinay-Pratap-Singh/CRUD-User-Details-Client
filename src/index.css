@@ -1,13 +1,27 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.shadow{
+  box-shadow: 2px 2px 2px gray, -2px -2px 2px gray;
+}
+
+/* for displaying the placholder text */
+#inputID::placeholder {
+  color: rgb(91, 90, 90);
+  opacity: 1;
+}
+
+/* for removing the spinner of number input */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
