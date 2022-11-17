@@ -5,10 +5,15 @@ import DisplayCard from './components/DisplayCard'
 
 const App = () => {
   return (
-    <div className='h-[100vh] w-full flex items-center justify-center gap-6 bg-gray-300'>
+    <div className=' w-full flex flex-col items-center justify-center gap-6 bg-gray-300'>
+      <div className='flex items-center gap-6 mt-10'>
       <AddCard></AddCard>
       <UpdateCard></UpdateCard>
+      </div>
+      
+      <div className='flex flex-wrap items-center gap-6 my-10'>
       <DisplayCard></DisplayCard>
+      </div>
     </div>
   )
 }

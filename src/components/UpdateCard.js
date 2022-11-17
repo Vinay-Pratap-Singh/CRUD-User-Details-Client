@@ -34,13 +34,14 @@ const UpdateCard = () => {
   };
 
   return (
-    <form onSubmit={updateUser} type="POST" className="shadow bg-gray-400 rounded-[5px]">
+    <form onSubmit={updateUser} type="POST" className="shadow bg-gray-400 rounded-[5px] w-[220px]">
       <div className="p-4 flex flex-col gap-2">
         <input
           id="inputID"
           className="px-2 py-1 bg-inherit border-b-[1px] outline-none text-sm"
           type="text"
           placeholder="Enter the name"
+          minLength={3}
           value={name}
           onChange={(event)=>setName(event.target.value)}
         />
@@ -57,6 +58,8 @@ const UpdateCard = () => {
           className="px-2 py-1 bg-inherit border-b-[1px] outline-none text-sm"
           type="number"
           placeholder="Enter phone number"
+          minLength={10}
+          maxLength={10}
           value={phone}
           onChange={(event)=>{setPhone(event.target.value)}}
         />
@@ -65,6 +68,8 @@ const UpdateCard = () => {
           className="px-2 py-1 bg-inherit border-b-[1px] outline-none text-sm"
           type="text"
           placeholder="Enter the password"
+          minLength={8}
+          maxLength={8}
           value={password}
           onChange={(event)=>{setPassword(event.target.value)}}
         />
@@ -73,6 +78,8 @@ const UpdateCard = () => {
           className="px-2 py-1 bg-inherit border-b-[1px] outline-none text-sm"
           type="text"
           placeholder="Confirm the password"
+          minLength={8}
+          maxLength={8}
           value={cpassword}
           onChange={(event)=>{setcPassword(event.target.value)}}
         />
