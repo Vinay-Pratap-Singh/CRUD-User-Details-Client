@@ -69,7 +69,6 @@ const UpdateCard = () => {
           type="text"
           placeholder="Enter the password"
           minLength={8}
-          maxLength={8}
           value={password}
           onChange={(event)=>{setPassword(event.target.value)}}
         />
@@ -79,7 +78,6 @@ const UpdateCard = () => {
           type="text"
           placeholder="Confirm the password"
           minLength={8}
-          maxLength={8}
           value={cpassword}
           onChange={(event)=>{setcPassword(event.target.value)}}
         />
